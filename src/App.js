@@ -6,7 +6,7 @@ function App() {
 
   const questions = [
     {
-      questionText: 'Is your company in search of a(n)',
+      questionText: 'Since I am an Entry Level Engineer, what position are you trying to fill?',
       answerOptions: [
         {answerText: 'Senior Web Developer', isCorrect: false},
         {answerText: 'Carnival Clown', isCorrect: false},
@@ -15,30 +15,30 @@ function App() {
       ]
     },
     {
-      questionText: 'Sample Question 2',
+      questionText: 'My company\'s work culture is..',
       answerOptions: [
-        {answerText: 'Answer 1', isCorrect: false},
-        {answerText: 'Answer 2', isCorrect: true},
-        {answerText: 'Answer 3', isCorrect: false},
-        {answerText: 'Answer 4', isCorrect: false}
+        {answerText: 'Hostile', isCorrect: false},
+        {answerText: 'Positive and Encouraging', isCorrect: true},
+        {answerText: 'Toxic', isCorrect: false},
+        {answerText: 'Based on ancient myths', isCorrect: false}
       ]
     },
     {
-      questionText: 'Sample Question 3',
+      questionText: 'My company believes in...',
       answerOptions: [
-        {answerText: 'Answer 1', isCorrect: true},
-        {answerText: 'Answer 2', isCorrect: false},
-        {answerText: 'Answer 3', isCorrect: false},
-        {answerText: 'Answer 4', isCorrect: false}
+        {answerText: 'Developing employees', isCorrect: true},
+        {answerText: 'Unpaid overtime', isCorrect: false},
+        {answerText: 'Working 8 days a week', isCorrect: false},
+        {answerText: 'Short-term employment', isCorrect: false}
       ]
     },
     {
-      questionText: 'Sample Question 4',
+      questionText: 'I found this quiz to be..',
       answerOptions: [
-        {answerText: 'Answer 1', isCorrect: false},
-        {answerText: 'Answer 2', isCorrect: false},
-        {answerText: 'Answer 3', isCorrect: false},
-        {answerText: 'Answer 4', isCorrect: true}
+        {answerText: 'A waste of time...', isCorrect: false},
+        {answerText: 'Confusing', isCorrect: false},
+        {answerText: 'ummm...', isCorrect: false},
+        {answerText: 'Fun and Informative', isCorrect: true}
       ]
     },
   ]

@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+// import saveHighScore from './Scores.js';
 import {useState} from 'react'
  
 function App() {
 
   const questions = [
     {
-      questionText: 'Since I am an Entry Level Engineer, what position are you trying to fill?',
+      questionText: 'Given that I am an Entry Level Engineer, what position in your company brought me to your attention?',
       answerOptions: [
         {answerText: 'Senior Web Developer', isCorrect: false},
         {answerText: 'Carnival Clown', isCorrect: false},
@@ -33,7 +34,7 @@ function App() {
       ]
     },
     {
-      questionText: 'I found this quiz to be..',
+      questionText: 'I found this brief quiz to be..',
       answerOptions: [
         {answerText: 'A waste of time...', isCorrect: false},
         {answerText: 'Confusing', isCorrect: false},
@@ -62,10 +63,25 @@ function App() {
     }
   }
 
+  // const positiveScore = ({score}) => {
+  //   if (score === true) {
+  //     return (
+  //       <div className='highScores'>Test</div>
+  //     )
+  //   }
+  // }
+
   return (
     <div className="App">
       {showScore ? (
-        <div className='outcomeBox'>You scored {score} out of {questions.length}</div>
+        <div className='outcomeBox'>You scored {score} out of {questions.length}!
+          <button className='resetButton' onClick={() => {
+            setScore(0); 
+            setCurrQuestion(0);
+            setShowScore(false);
+            }
+          }>Reset Quiz</button>
+        </div>
       ) : (
         <>
           <div className='container'>
@@ -79,11 +95,13 @@ function App() {
             
             <div className='answerSection'>
               {questions[currQuestion].answerOptions.map((answerOption) => (
-                <button onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}>
+                <button className='answerButtons' onClick={() => 
+                  handleAnswerButtonClick(answerOption.isCorrect)}>
                   {answerOption.answerText}
                 </button>
               ))}
             </div>
+            <div className='highScores'></div>
             </div>
         </>
       )}
@@ -91,4 +109,6 @@ function App() {
   );
 }
 
-export default App;
+
+
+export default App

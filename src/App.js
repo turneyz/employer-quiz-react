@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-// import saveHighScore from './Scores.js';
-import {useState} from 'react'
+import {useState} from 'react';
+// import { useNavigate } from "react-router-dom";
  
 function App() {
 
@@ -62,6 +61,8 @@ function App() {
       setShowScore(true)
     }
   }
+  
+  // const navigate = useNavigate()
 
   // const positiveScore = ({score}) => {
   //   if (score === true) {
@@ -81,6 +82,9 @@ function App() {
             setShowScore(false);
             }
           }>Reset Quiz</button>
+          {/* <button className='portfolioButton' onClick={() => {
+            navigate("www.turneyintech.com")
+          }}>Let's get in touch!</button> */}
         </div>
       ) : (
         <>
